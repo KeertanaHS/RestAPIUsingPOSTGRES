@@ -20,15 +20,21 @@ public class DBClass {
     public static Connection getConnection(){
         Connection conn = null;
         try {
-            Class.forName("org.postgresql.Driver");
+            /*Class.forName("org.postgresql.Driver");
             conn = DriverManager.getConnection(
-                    "jdbc:postgresql://localhost:5432/postgres","postgres", "root");
+                    "jdbc:postgresql://localhost:5432/postgres","postgres", "root");*/
             
             /*Class.forName("org.postgresql.Driver");
-             conn = DriverManager.getConnection("jdbc:postgresql://ec2-23-21-42-29.compute-1.amazonaws.com:5432/d7b1b6rf9qf6fh?ssl=true&sslfactory=org.postgresql.ssl.NonValidatingFactory&searchpath=webresto",
+            conn = DriverManager.getConnection("jdbc:postgresql://eec2-54-235-94-236.compute-1.amazonaws.com:5432/d4vpd3oiivamqr?ssl=true&sslfactory=org.postgresql.ssl.NonValidatingFactory&searchpath=webresto",
              "User\n" +
-                "mjyoxvcfvlnifw", "1T96gXb1uJ-vg9KKdwX1m6ktUY");*/
+                "dhqxuzuezjrmqx", "qwgnSsOjCFyP9TDG82kUO2kie4");*/
             
+            /*Class.forName("org.postgresql.Driver");
+            conn = DriverManager.getConnection("jdbc:postgresql://ec2-54-235-94-236.compute-1.amazonaws.com:5432/d4vpd3oiivamqr?sslmode=require&user=dhqxuzuezjrmqx&password=qwgnSsOjCFyP9TDG82kUO2kie4");*/
+            
+            Class.forName("org.postgresql.Driver");
+            conn = DriverManager.getConnection("jdbc:postgresql://ec2-54-235-94-236.compute-1.amazonaws.com:5432/d4vpd3oiivamqr?ssl=true&sslfactory=org.postgresql.ssl.NonValidatingFactory&searchpath=webresto",
+           "dhqxuzuezjrmqx", "qwgnSsOjCFyP9TDG82kUO2kie4");
             
         } catch (ClassNotFoundException ex) {
             Logger.getLogger(DBClass.class.getName()).log(Level.SEVERE, null, ex);
